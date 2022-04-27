@@ -23,14 +23,14 @@ public class FineBFS {
     }
 
     public static void main(String[] args) throws FileNotFoundException{
-        Scanner stdin = new Scanner(new File("graph2.txt"));
+        Scanner stdin = new Scanner(new File("graph3.txt"));
         int n = stdin.nextInt();
         graph = setUpGraph(stdin, n);
 
 
         // Testing done on a dual-core system.    
 		Thread thread1 = new Thread(new Thready(fg, 0));
-        Thread thread2 = new Thread(new Thready(fg, 50));
+        Thread thread2 = new Thread(new Thready(fg, 500));
 
         long startTime = System.nanoTime();
 
